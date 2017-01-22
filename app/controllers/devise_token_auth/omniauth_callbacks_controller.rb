@@ -8,7 +8,7 @@ module DeviseTokenAuth
     # intermediary route for successful omniauth authentication. omniauth does
     # not support multiple models, so we must resort to this terrible hack.
     def redirect_callbacks
-
+    logger.info"TEST"
       # derive target redirect route from 'resource_class' param, which was set
       # before authentication.
       devise_mapping = [request.env['omniauth.params']['namespace_name'],
